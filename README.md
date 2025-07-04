@@ -26,7 +26,19 @@ restaurant-booking-app/
 3. Point HTML form to backend via ALB
 4. Access via Route 53 custom domain
 
-## 🔐 Environment Variables (optional improvement)
+## 🛠️ MySQL Workbench Usage
 
-Consider moving DB credentials to `.env` file or AWS Secrets Manager.
+Before integrating with Amazon RDS, I used **MySQL Workbench** locally to test and manage the booking database.
+
+### ✅ What I Did with MySQL Workbench:
+
+- Designed the **initial schema** for the `restaurant` database.
+- Created the `bookings` table:
+  ```sql
+  CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    date DATE
+  );
+
 
